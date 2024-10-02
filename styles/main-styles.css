@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --red-color: #eb5d3a;
+  --gray-color: #cecece;
+  --button-border: hsla(240, 2%, 48%, 0.2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #000;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/* HEADER STYLES  */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: auto;
+  padding: 35px 0px;
+}
+.header .logo h1 {
+  color: #fff;
+}
+.header .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .list li {
+  padding: 0px 20px;
+}
+.header .list li a {
+  color: var(--gray-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+.header .list li a:hover {
+  color: var(--red-color);
+  transition: 0.3s ease-in;
+}
+.header .list li .active {
+  color: var(--red-color);
+}
+.hire-btn {
+  border: 1px solid var(--button-border);
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.hire-btn:hover {
+  background-color: var(--red-color);
+  transition: 0.3s ease-in;
+}
+.menu {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .header {
+    padding: 15px 10px;
+  }
+  .header .logo h1 {
+    font-size: 23px;
+  }
+  .header .list,
+  .hire-btn {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .menu .bar {
+    background-color: #fff;
+    height: 2px;
+    width: 30px;
+    margin-bottom: 7px;
+  }
+}
