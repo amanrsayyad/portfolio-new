@@ -4,6 +4,7 @@
   --red-color: #eb5d3a;
   --gray-color: #cecece;
   --button-border: hsla(240, 2%, 48%, 0.2);
+  --light-black: #121214;
 }
 * {
   margin: 0;
@@ -20,23 +21,32 @@ a {
 li {
   list-style: none;
 }
-
-/* HEADER STYLES  */
-.header {
+.container {
+  max-width: 1320px;
+  margin: auto;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-bet {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.f-col {
+  flex-direction: column;
+}
+
+/* HEADER STYLES  */
+.header {
   max-width: 1320px;
   margin: auto;
   padding: 35px 0px;
 }
 .header .logo h1 {
   color: #fff;
-}
-.header .list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .header .list li {
   padding: 0px 20px;
@@ -89,4 +99,43 @@ li {
     width: 30px;
     margin-bottom: 7px;
   }
+}
+
+/* HERO STYLES */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+}
+.hero-card {
+  background-color: var(--light-black);
+}
+.profile {
+  padding: 45px;
+}
+.profile .profile-img img {
+  width: 270px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.profile h2 {
+  color: #fff;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+.profile-tag {
+  color: var(--gray-color);
+  margin-bottom: 35px;
+}
+.profile .social-media li {
+  padding: 0px 15px;
+}
+.profile .social-media li a {
+  border: 1px solid var(--button-border);
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
 }
